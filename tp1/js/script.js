@@ -28,19 +28,19 @@ let gTitreRouge = false;
 function init(){
 
     // ÉCRIRE VOTRE CODE ICI
-    document.querySelector("#carre1").addEventListener("click", coup)
-    document.querySelector("#carre2").addEventListener("click", coup)
-    document.querySelector("#carre3").addEventListener("click", coup)
-    document.querySelector("#carre4").addEventListener("click", coup)
-    document.querySelector("#carre5").addEventListener("click", coup)
-    document.querySelector("#carre6").addEventListener("click", coup)
-    document.querySelector("#carre7").addEventListener("click", coup)
-    document.querySelector("#carre8").addEventListener("click", coup)
-    document.querySelector("#carre9").addEventListener("click", coup)
-    document.querySelector("#reset").addEventListener("");
+    document.querySelector("#carre1").addEventListener("click", coup);
+    document.querySelector("#carre2").addEventListener("click", coup);
+    document.querySelector("#carre3").addEventListener("click", coup);
+    document.querySelector("#carre4").addEventListener("click", coup);
+    document.querySelector("#carre5").addEventListener("click", coup);
+    document.querySelector("#carre6").addEventListener("click", coup);
+    document.querySelector("#carre7").addEventListener("click", coup);
+    document.querySelector("#carre8").addEventListener("click", coup);
+    document.querySelector("#carre9").addEventListener("click", coup);
+    document.querySelector("#reset").addEventListener("mouseover", survolRecommencer);
     document.querySelector("#reset").addEventListener("mouseout", finSurvolRecommencer);
-    document.querySelector("#").addEventListener();
-    document.querySelector("#").addEventListener();
+    document.querySelector("#reset").addEventListener("click", recommencer);
+    //document.querySelector("#").addEventListener();
 
 }
 
@@ -63,7 +63,7 @@ function init(){
 function coup(){
 
     // ÉCRIRE VOTRE CODE ICI
-    if("#carre1".textContent == ""){
+    if(this.textContent == ""){
         this.textContent = gTour;
         verifierVictoire();
     }
@@ -91,6 +91,8 @@ function coup(){
 function survolRecommencer(){
 
     // ÉCRIRE VOTRE CODE ICI
+    document.querySelector("#reset").style.backgroundColor = "crimson";
+    document.querySelector("#reset").style.color = "white";
 
 
 }
@@ -98,6 +100,8 @@ function survolRecommencer(){
 function finSurvolRecommencer(){
 
     // ÉCRIRE VOTRE CODE ICI
+    document.querySelector("#reset").style.backgroundColor = "#E9E9ED";
+    document.querySelector("#reset").style.color = "black";
 
 }
 
@@ -117,6 +121,18 @@ function finSurvolRecommencer(){
 function recommencer(){
 
     // ÉCRIRE VOTRE CODE ICI
+    let gTour = "X";
+    document.querySelector("#carre1").textContent = ""
+    document.querySelector("#carre2").textContent = ""
+    document.querySelector("#carre3").textContent = ""
+    document.querySelector("#carre4").textContent = ""
+    document.querySelector("#carre5").textContent = ""
+    document.querySelector("#carre6").textContent = ""
+    document.querySelector("#carre7").textContent = ""
+    document.querySelector("#carre8").textContent = ""
+    document.querySelector("#carre9").textContent = ""
+    document.querySelector("#joueurX").style.borderColor = "gold"
+    document.querySelector("#joueur0").style.borderColor = "black"
 
 }
 
@@ -132,6 +148,16 @@ function recommencer(){
 function nouveauTour(){
 
     // ÉCRIRE VOTRE CODE ICI
+    if(gTour = 0){
+        let gTour = "X"
+        document.querySelector("#joueurX").style.borderColor = "gold"
+        document.querySelector("#joueur0").style.borderColor = "black"
+    }
+    else if(gTour = "X"){
+        let gTour = 0
+        document.querySelector("#joueurX").style.borderColor = "black"
+        document.querySelector("#joueur0").style.borderColor = "gold"
+    }
 
 }
 
