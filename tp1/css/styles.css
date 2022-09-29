@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+body{
+    font-family:verdana;
+}
+
+#description{
+    background:linear-gradient(to bottom, #a9d8ee, #766fc5, #682e7c);
+    width:800px;
+    margin:auto;
+    color:rgb(237, 245, 243);
+    border-radius:20px;
+    padding:20px;
+}
+
+#description p, #description ul{
+    font-size:1.2em;
+}
+
+#container{
+    width:800px;
+    margin:auto;
+    margin-top:20px;
+    justify-content:center;
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+}
+
+[id^="carre"]{
+    border:black solid 5px;
+    width:200px;
+    height:200px;
+    text-align:center;
+    font-size:10em;
+}
+
+button{
+    padding:5px 30px;
+    font-size:1.2em;
+    cursor:pointer;
+    margin:10px;
+    border-radius:50px;
+}
+
+[id^="joueur"]{
+    font-size:3em;
+    border:solid black 5px;
+    padding:10px;
+    width:58px;
+    text-align:center;
+    border-radius:50px;
+}
+
+#joueurX{
+    border-color:gold;
+}
+
+[id^="score"]{
+    margin:10px;
+    font-size:1.5em;
+}
